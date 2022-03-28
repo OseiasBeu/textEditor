@@ -1,0 +1,20 @@
+- [ ] Definição do método construtor
+- [ ] Definição da função de mudança de nome
+- [ ] Definição da função novo arquivo
+- [ ] Definição da função abrir arquivo
+- [ ] Definição da função salvar arquivo
+- [ ] Definição da função salvar como
+- [ ] Definição da função sair
+- [ ] Definição da função copiar
+- [ ] Definição da função cortar
+- [ ] Definição da função colar
+- [ ] Definição da função desfazer 
+- [ ] Definição da função informações (Sobre)
+- [ ] Definição da função de teclas de atalho
+- [ ] Montar modo de utlizção no readme.md
+- [ ] Montar Sistema de Log
+- [ ] 
+- [ ] 
+- [ ] 
+- [ ] 
+- [ ] 
