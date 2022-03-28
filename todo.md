@@ -1,5 +1,5 @@
 - [ ] Definição do método construtor
-- [ ] Definição da função de mudança de nome
+- [x] Definição da função de mudança de nome
 - [ ] Definição da função novo arquivo
 - [ ] Definição da função abrir arquivo
 - [ ] Definição da função salvar arquivo
@@ -13,7 +13,7 @@
 - [ ] Definição da função de teclas de atalho
 - [ ] Montar modo de utlizção no readme.md
 - [ ] Montar Sistema de Log
-- [ ] 
+- [ ] Incluir sistema de documentação
 - [ ] 
 - [ ] 
 - [ ] 
