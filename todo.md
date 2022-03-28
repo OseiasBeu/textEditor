@@ -1,6 +1,6 @@
 - [ ] Definição do método construtor
 - [x] Definição da função de mudança de nome
-- [ ] Definição da função novo arquivo
+- [x] Definição da função novo arquivo
 - [ ] Definição da função abrir arquivo
 - [ ] Definição da função salvar arquivo
 - [ ] Definição da função salvar como
