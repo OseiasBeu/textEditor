@@ -12,7 +12,7 @@
 - [x] Definição da função desfazer 
 - [x] Criar menu Ajuda
 - [x] Definição da função informações (Sobre)
-- [ ] Definição da função de teclas de atalho
+- [x] Definição da função de teclas de atalho
 - [ ] Montar modo de utlizção no readme.md
 - [ ] Montar Sistema de Log
 - [ ] Incluir sistema de documentação

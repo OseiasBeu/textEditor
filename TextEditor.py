@@ -82,10 +82,10 @@ class TextEditor:
         self.editmenu.add_command(label='Cortar',accelerator='Ctrl+X', command=self.cortar)
 
         #Adicioandno a função cortar
-        self.editmenu.add_command(label='Copiar',accelerator='Ctrl+X', command=self.copiar)       
+        self.editmenu.add_command(label='Copiar',accelerator='Ctrl+C', command=self.copiar)       
 
         #Adicioandno a função cortar
-        self.editmenu.add_command(label='Colar',accelerator='Ctrl+X', command=self.colar)
+        self.editmenu.add_command(label='Colar',accelerator='Ctrl+V', command=self.colar)
 
         #Adicionamdo separacao de opções
         self.editmenu.add_separator()
@@ -109,6 +109,8 @@ class TextEditor:
         scrol_y.pack(side=RIGHT,fill=Y)
         scrol_y.config(command=self.txtarea.yview)
         self.txtarea.pack(fill=BOTH,expand=1)
+
+        self.atalhos()
 
 
 
@@ -184,6 +186,17 @@ class TextEditor:
 
     # Definindo função de salvar
     def salvar(self, *args):
+        '''
+        -> Método Salvar
+        - Descrição: Responsável por salvar os arquivos em edição!
+        
+        - Parâmetros: 
+            self 
+
+        - Retornos:
+             - Arquivo de edição salvo
+
+        '''
         # Tratando possíveis erros
         try:
             # Verificando se o arquivo está vazio
@@ -203,8 +216,22 @@ class TextEditor:
                 self.status.set("Salvo com sucesso!")
         except Exception as e:
             messagebox.showerror("Erro:",e)
+   
     # Definindo função de salvar como
     def salvarComo(self, *args):
+        '''
+        -> Método salvarComo
+        - Descrição: Responsável por salvar novos arquivos com extenções específicas, podendo ser incluídas novas extenções.
+            Exemplo de extenções: 
+                Padrão: "sem titulo.txt",
+                Outros tipos: ("All Files","*.*"),("Text Files","*.txt"),("Python Files","*.py")
+        
+        - Parâmetros: 
+            self
+
+        - Retornos:
+             - Arquivo novo com um extenção .
+        '''
         # Tratando possíveis erros
         try:
             #Perguntando o nome e o tipo do arquivo
@@ -229,6 +256,16 @@ class TextEditor:
 
     #Definição da função sair
     def sair(self,*args):
+        '''
+        -> Método sair
+        - Descrição: Responsável por sair do editor de texto
+        
+        - Parâmetros: 
+            self
+
+        - Retornos:
+             - Fechamento do programa!
+        '''
         op = messagebox.askyesno("ATENÇÃO",'Você deseja mesmo sair?')
         if op >0:
             self.root.destroy()
@@ -237,18 +274,58 @@ class TextEditor:
 
     #Definição da função cortar:
     def cortar(self,*args):
+        '''
+        -> Método cortar
+        - Descrição: Responsável por cortar textos dentro do editor de texto.
+        
+        - Parâmetros: 
+            self
+
+        - Retornos:
+             - textos removidos da tela armazenados na memória do teclado.
+        '''
         self.txtarea.event_generate("<<Cut>>")
 
     #Definição da função copiar:
     def copiar(self,*args):
+        '''
+        -> Método sair
+        - Descrição: Responsável por copiar palavras e frases do editor de texto.
+        
+        - Parâmetros: 
+            self
+
+        - Retornos:
+             - textos copiados da tela armazenados na memória do teclado.
+        '''
         self.txtarea.event_generate("<<Copy>>")
 
     #Definição da função colar:
     def colar(self,*args):
+        '''
+        -> Método colar
+        - Descrição: Responsável por colar textos e frases na memória do teclado
+        
+        - Parâmetros: 
+            self
+
+        - Retornos:
+             - textos inseridos na area de texto.
+        '''
         self.txtarea.event_generate("<<Paste>>")
 
     #Definição da função desfazer
     def desfazer(self, *args):
+        '''
+        -> Método desfazr
+        - Descrição: Responsável desfazer alterações feitas na area de texto
+        
+        - Parâmetros: 
+            self
+
+        - Retornos:
+             - Alterações feitas dentro da ara de texto sendo desfeitas.
+        '''
         #Tratando qualquer eventualidade
         try:
             if self.filename:
@@ -273,9 +350,39 @@ class TextEditor:
             messagebox.showerror('Erro:',e)
 
     def sobre(self):
+        '''
+        -> Método sobre
+        - Descrição: Responsável por indicar ao usuário informações do desenvolvedor
+        
+        - Parâmetros: 
+            self
+
+        - Retornos:
+             - text box com uma mensagem
+        '''
         messagebox.showinfo("Sobre o Text Editor","Um editor de texto simples criado com Python \n, Acesse: https://github.com/OseiasBeu/textEditor para mais! ")
 
-    # def atalhos(self):
+    def atalhos(self):
+        '''
+        -> Método atalhos
+        - Descrição: Responsável por implementar todos os atalhos de teclado para as funcionalidades do menu.
+        
+        - Parâmetros: 
+            self
+
+        - Retornos:
+             - Execução das funcionalidades do menu atravéz do teclado!
+        '''        
+        self.txtarea.bind("<Control-n>",self.novoArquivo)
+        self.txtarea.bind("<Control-o>",self.abrirArquivo)
+        self.txtarea.bind("<Control-s>",self.salvar)
+        self.txtarea.bind("<Control-a>",self.salvarComo)
+        self.txtarea.bind("<Control-e>",self.sair)
+        self.txtarea.bind("<Control-x>",self.cortar)
+        self.txtarea.bind("<Control-c>",self.copiar)
+        self.txtarea.bind("<Control-v>",self.colar)
+        self.txtarea.bind("<Control-u>",self.desfazer)
+
 
 #Criação da instância do tkinker
 root = Tk()
