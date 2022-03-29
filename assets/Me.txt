@@ -1,0 +1,7 @@
+
+
+
+Este é um editor de código simples que desenvovi com a tecnologia python  para praticar e montar um projeto 
+para meu canal no Youtube:
+
+			Beu_IO
