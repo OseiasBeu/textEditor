@@ -6,10 +6,11 @@
 - [x] Definição da função salvar como
 - [x] Definição da função sair
 - [x] Criar menu editar
-- [ ] Definição da função copiar
-- [ ] Definição da função cortar
-- [ ] Definição da função colar
-- [ ] Definição da função desfazer 
+- [x] Definição da função copiar
+- [x] Definição da função cortar
+- [x] Definição da função colar
+- [x] Definição da função desfazer 
+- [ ] Criar menu Ajuda
 - [ ] Definição da função informações (Sobre)
 - [ ] Definição da função de teclas de atalho
 - [ ] Montar modo de utlizção no readme.md

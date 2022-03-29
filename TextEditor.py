@@ -79,9 +79,19 @@ class TextEditor:
         self.editmenu = Menu(self.menubar, font=("times new roman",12,"bold"),activebackground="skyblue", tearoff=0)
 
         #Adicioandno a função cortar
+        self.editmenu.add_command(label='Cortar',accelerator='Ctrl+X', command=self.cortar)
+
+        #Adicioandno a função cortar
+        self.editmenu.add_command(label='Copiar',accelerator='Ctrl+X', command=self.copiar)       
+
+        #Adicioandno a função cortar
+        self.editmenu.add_command(label='Colar',accelerator='Ctrl+X', command=self.colar)
 
         #Adicionamdo separacao de opções
         self.editmenu.add_separator()
+
+        #Adicioanndo a Opção de desfazer
+        self.editmenu.add_command(label='Desfazer',accelerator='Ctrl+U', command=self.desfazer)
 
         #Cascateando o menu em subopções de editar
         self.menubar.add_cascade(label='Editar', menu=self.editmenu)
@@ -224,6 +234,42 @@ class TextEditor:
         else:
             return
 
+    #Definição da função cortar:
+    def cortar(self,*args):
+        self.txtarea.event_generate("<<Cut>>")
+
+    #Definição da função copiar:
+    def copiar(self,*args):
+        self.txtarea.event_generate("<<Copy>>")
+
+    #Definição da função colar:
+    def colar(self,*args):
+        self.txtarea.event_generate("<<Paste>>")
+
+    #Definição da função desfazer
+    def desfazer(self, *args):
+        #Tratando qualquer eventualidade
+        try:
+            if self.filename:
+                self.txtarea.delete('1.0',END)
+                #Arbrindo arquivo no modo leitura
+                infile = open(self.filename,"r")
+
+                #Inserindo lina a lina na area de texto
+                for line in infile:
+                    self.txtarea.insert(END,line)
+                
+                # Fechando o arquivo
+                infile.close()
+                self.settitle()
+                self.status.set('Desfeito com sucesso!')
+            else:
+                self.txtarea.delete('1.0',END)
+                self.filename = None
+                self.settitle()
+                self.status.set('Desfeito com sucesso!')
+        except Exception as e:
+            messagebox.showerror('Erro:',e)
 
 #Criação da instância do tkinker
 root = Tk()
