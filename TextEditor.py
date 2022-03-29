@@ -96,18 +96,19 @@ class TextEditor:
         #Cascateando o menu em subopções de editar
         self.menubar.add_cascade(label='Editar', menu=self.editmenu)
 
+        #Criando a opção Ajuda no menu 
+        self.helpmenu = Menu(self.menubar, font=("times new roman",12,"bold"),activebackground="skyblue", tearoff=0)
 
-
+        #Adicioanndo a Opção de sobre
+        self.helpmenu.add_command(label='Sobre',accelerator='Ctrl+U', command=self.sobre)
+        #Cascateando o menu em subopções de editar
+        self.menubar.add_cascade(label='Ajuda', menu=self.helpmenu)
 
         scrol_y = Scrollbar(self.root,orient=VERTICAL)
         self.txtarea = Text(self.root,yscrollcommand=scrol_y.set,font=("times new roman",15,"bold"),state="normal",relief=GROOVE)
         scrol_y.pack(side=RIGHT,fill=Y)
         scrol_y.config(command=self.txtarea.yview)
         self.txtarea.pack(fill=BOTH,expand=1)
-
-
-    
-
 
 
 
@@ -270,6 +271,11 @@ class TextEditor:
                 self.status.set('Desfeito com sucesso!')
         except Exception as e:
             messagebox.showerror('Erro:',e)
+
+    def sobre(self):
+        messagebox.showinfo("Sobre o Text Editor","Um editor de texto simples criado com Python \n, Acesse: https://github.com/OseiasBeu/textEditor para mais! ")
+
+    # def atalhos(self):
 
 #Criação da instância do tkinker
 root = Tk()
