@@ -1,20 +1,18 @@
-- [ ] Definição do método construtor
+- [x] Definição do método construtor
 - [x] Definição da função de mudança de nome
 - [x] Definição da função novo arquivo
 - [x] Definição da função abrir arquivo
 - [x] Definição da função salvar arquivo
 - [x] Definição da função salvar como
-- [ ] Definição da função sair
-- [ ] Definição da função copiar
-- [ ] Definição da função cortar
-- [ ] Definição da função colar
-- [ ] Definição da função desfazer 
-- [ ] Definição da função informações (Sobre)
-- [ ] Definição da função de teclas de atalho
+- [x] Definição da função sair
+- [x] Criar menu editar
+- [x] Definição da função copiar
+- [x] Definição da função cortar
+- [x] Definição da função colar
+- [x] Definição da função desfazer 
+- [x] Criar menu Ajuda
+- [x] Definição da função informações (Sobre)
+- [x] Definição da função de teclas de atalho
 - [ ] Montar modo de utlizção no readme.md
-- [ ] Montar Sistema de Log
-- [ ] Incluir sistema de documentação
-- [ ] 
-- [ ] 
-- [ ] 
-- [ ] 
+- [x] Montar Sistema de Log
+- [x] Incluir sistema de documentação
