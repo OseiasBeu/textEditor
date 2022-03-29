@@ -104,6 +104,42 @@ class TextEditor:
         self.filename = None
         self.settitle()
         self.status.set('Novo Arquivo Criado!')
+    
+    def abrirArquivo(self, *args):
+        '''
+        -> Método abrirArquivo
+         - Descrição: Responsável por abrir arquivos já existentes no computador
+         - Parâmetros:
+            caminhos: Caminhos de arquivos existentes no computador
+        
+         - Retorno:
+            Seu retorno é o arquivo aberto na text area.
+        '''
+        # tratando possíveis erros
+        try:
+            self.filename = filedialog.askopenfilename(title='Escolha um arquivo', filetypes = (("All Files","*.*"),("Text Files","*.txt"),("Python Files","*.py")))
+            if self.filename:
+                #Abrindo arquivo no modo de leitura
+                infile = open(self.filename,'r')
+                
+                #Limpando a area de texto
+                self.txtarea.delete("1.0",END)
+
+                #Inserindo linhas na area de texto
+                for line in infile:
+                    self.txtarea.insert(END,line)
+                
+                #Fechadno arquivo
+                infile.close()
+
+                #Alterando o nome da janela
+                self.settitle()
+
+                #Atualizando o staus
+                self.status.set("Arquivo aberto com sucesso!")
+        except Exception as e:
+            messagebox.showerror("Erro:",e)
+
 
 
 #Criação da instância do tkinker
