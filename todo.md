@@ -4,7 +4,7 @@
 - [x] Definição da função abrir arquivo
 - [x] Definição da função salvar arquivo
 - [x] Definição da função salvar como
-- [ ] Definição da função sair
+- [x] Definição da função sair
 - [ ] Definição da função copiar
 - [ ] Definição da função cortar
 - [ ] Definição da função colar

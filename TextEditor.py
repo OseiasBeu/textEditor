@@ -69,6 +69,9 @@ class TextEditor:
         #Adicionamdo separacao de opções
         self.filemenu.add_separator()
 
+        # Adicioando opção de SAIR
+        self.filemenu.add_command(label='Sair',accelerator='Ctrl+E', command=self.sair)
+
         #Cascateando o menu em subopções
         self.menubar.add_cascade(label='Arquivo', menu=self.filemenu)
 
@@ -154,6 +157,7 @@ class TextEditor:
         except Exception as e:
             messagebox.showerror("Erro:",e)
 
+    # Definindo função de salvar
     def salvar(self, *args):
         # Tratando possíveis erros
         try:
@@ -174,7 +178,7 @@ class TextEditor:
                 self.status.set("Salvo com sucesso!")
         except Exception as e:
             messagebox.showerror("Erro:",e)
-
+    # Definindo função de salvar como
     def salvarComo(self, *args):
         # Tratando possíveis erros
         try:
@@ -198,7 +202,15 @@ class TextEditor:
         except Exception as e:
             messagebox.showerror("Erro:",e)
 
+    #Definição da função sair
+    def sair(self,*args):
+        op = messagebox.askyesno("ATENÇÃO",'Você deseja mesmo sair?')
+        if op >0:
+            self.root.destroy()
+        else:
+            return
 
+    
 #Criação da instância do tkinker
 root = Tk()
 TextEditor(root)
