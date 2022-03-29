@@ -2,8 +2,8 @@
 - [x] Definição da função de mudança de nome
 - [x] Definição da função novo arquivo
 - [x] Definição da função abrir arquivo
-- [ ] Definição da função salvar arquivo
-- [ ] Definição da função salvar como
+- [x] Definição da função salvar arquivo
+- [x] Definição da função salvar como
 - [ ] Definição da função sair
 - [ ] Definição da função copiar
 - [ ] Definição da função cortar

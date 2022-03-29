@@ -44,6 +44,7 @@ class TextEditor:
         #Iniciando o status
         self.status.set("Bem Vindo ao meu Editor de Texto!")
 
+
         #Criando o menu
         self.menubar = Menu(self.root, font=("times new roman",15,"bold"),activebackground="skyblue")
 
@@ -59,18 +60,31 @@ class TextEditor:
         # Adicioanndo abertura de arquivos
         self.filemenu.add_command(label='Abrir Arquivo',accelerator='Ctrl+O', command=self.abrirArquivo)
 
+        # Adicioando opção de salvar
+        self.filemenu.add_command(label='Salvar',accelerator='Ctrl+S', command=self.salvar)
+
+        # Adicioando opção de salvar como
+        self.filemenu.add_command(label='Salvar Como',accelerator='Ctrl+A', command=self.salvarComo)
+
         #Adicionamdo separacao de opções
         self.filemenu.add_separator()
 
         #Cascateando o menu em subopções
         self.menubar.add_cascade(label='Arquivo', menu=self.filemenu)
 
+        scrol_y = Scrollbar(self.root,orient=VERTICAL)
+        self.txtarea = Text(self.root,yscrollcommand=scrol_y.set,font=("times new roman",15,"bold"),state="normal",relief=GROOVE)
+        scrol_y.pack(side=RIGHT,fill=Y)
+        scrol_y.config(command=self.txtarea.yview)
+        self.txtarea.pack(fill=BOTH,expand=1)
+
+
     
 
 
 
 
-    #Definição da função  de configuração do titulo
+    # Definição da função  de configuração do titulo
     def settitle(self):
         '''
         -> Método Settitle
@@ -85,7 +99,6 @@ class TextEditor:
             self.title.set(self.filename)
         else:
             self.title.set('Sem título!')
-
 
     # Definição da funnção novo arquivo
     def novoArquivo(self,*args):
@@ -105,6 +118,7 @@ class TextEditor:
         self.settitle()
         self.status.set('Novo Arquivo Criado!')
     
+    # Definição abrir aquivo
     def abrirArquivo(self, *args):
         '''
         -> Método abrirArquivo
@@ -140,6 +154,49 @@ class TextEditor:
         except Exception as e:
             messagebox.showerror("Erro:",e)
 
+    def salvar(self, *args):
+        # Tratando possíveis erros
+        try:
+            # Verificando se o arquivo está vazio
+            if self.filename:
+                data = self.txtarea.get("1.0",END)
+
+                #abrindo arquivo no modo de escrita
+                outfile = open(self.filename,"w")
+
+                #Escrevendo dentro do arquivo
+                outfile.write(data)
+                outfile.close()
+                #chamando a função de título
+                self.settitle()
+
+                #Atualizando o status
+                self.status.set("Salvo com sucesso!")
+        except Exception as e:
+            messagebox.showerror("Erro:",e)
+
+    def salvarComo(self, *args):
+        # Tratando possíveis erros
+        try:
+            #Perguntando o nome e o tipo do arquivo
+            untitledfile = filedialog.asksaveasfilename(title = "Salvar Arquivo como",defaultextension=".txt",initialfile = "sem titulo.txt",filetypes = (("All Files","*.*"),("Text Files","*.txt"),("Python Files","*.py")))
+            data = self.txtarea.get("1.0",END)
+
+            #abrindo arquivo no modo de escrita
+            outfile = open(untitledfile,"w")
+
+            #Escrevendo dentro do arquivo
+            outfile.write(data)
+            outfile.close()
+
+            # Atualizando o titulo da pagina
+            self.filename = untitledfile
+            #chamando a função de título
+            self.settitle()
+            #Atualizando o status
+            self.status.set("Salvo com sucesso!")
+        except Exception as e:
+            messagebox.showerror("Erro:",e)
 
 
 #Criação da instância do tkinker
