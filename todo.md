@@ -5,6 +5,7 @@
 - [x] Definição da função salvar arquivo
 - [x] Definição da função salvar como
 - [x] Definição da função sair
+- [x] Criar menu editar
 - [ ] Definição da função copiar
 - [ ] Definição da função cortar
 - [ ] Definição da função colar
@@ -14,7 +15,6 @@
 - [ ] Montar modo de utlizção no readme.md
 - [ ] Montar Sistema de Log
 - [ ] Incluir sistema de documentação
-- [ ] 
 - [ ] 
 - [ ] 
 - [ ] 

@@ -45,7 +45,7 @@ class TextEditor:
         self.status.set("Bem Vindo ao meu Editor de Texto!")
 
 
-        #Criando o menu
+        #Criando o menu 
         self.menubar = Menu(self.root, font=("times new roman",15,"bold"),activebackground="skyblue")
 
         #Configuração do menu na janela
@@ -72,8 +72,22 @@ class TextEditor:
         # Adicioando opção de SAIR
         self.filemenu.add_command(label='Sair',accelerator='Ctrl+E', command=self.sair)
 
-        #Cascateando o menu em subopções
+        #Cascateando o menu em subopções de arquivo
         self.menubar.add_cascade(label='Arquivo', menu=self.filemenu)
+
+        #Criando a opção Editar no menu 
+        self.editmenu = Menu(self.menubar, font=("times new roman",12,"bold"),activebackground="skyblue", tearoff=0)
+
+        #Adicioandno a função cortar
+
+        #Adicionamdo separacao de opções
+        self.editmenu.add_separator()
+
+        #Cascateando o menu em subopções de editar
+        self.menubar.add_cascade(label='Editar', menu=self.editmenu)
+
+
+
 
         scrol_y = Scrollbar(self.root,orient=VERTICAL)
         self.txtarea = Text(self.root,yscrollcommand=scrol_y.set,font=("times new roman",15,"bold"),state="normal",relief=GROOVE)
@@ -210,7 +224,7 @@ class TextEditor:
         else:
             return
 
-    
+
 #Criação da instância do tkinker
 root = Tk()
 TextEditor(root)
