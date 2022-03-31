@@ -1,0 +1,86 @@
+2022-03-29 15:14:26,118 - __main__ - INFO - Editor de Texto Inicializado!
+2022-03-29 15:14:26,121 - __main__ - INFO - Chamada da função settitle
+2022-03-29 15:14:26,121 - __main__ - INFO - Arquivo sem título gerado!
+2022-03-29 15:14:26,185 - __main__ - INFO - Chamada da função atalhos!
+2022-03-29 15:14:26,185 - __main__ - INFO - Atalho executado com sucesso!
+2022-03-29 15:14:53,325 - __main__ - INFO - Chamada da função abrirArquivo!
+2022-03-29 15:14:53,325 - __main__ - INFO - Abrindo menu de procura e escolha
+2022-03-29 15:14:58,380 - __main__ - INFO - Abrindo arquivo no modo de leitura
+2022-03-29 15:14:58,385 - __main__ - INFO - Fechadno arquivo!
+2022-03-29 15:14:58,385 - __main__ - INFO - Chamada da função settitle
+2022-03-29 15:14:58,385 - __main__ - INFO - Arquivo com título:C:/Users/f48014593820/Documents/Python Scripts/Projects/TextEditor/assets/script2.py gerado!
+2022-03-29 15:14:58,386 - __main__ - INFO - Arquivo Aberto com sucesso!
+2022-03-29 15:15:02,343 - __main__ - INFO - Chamada da função copiar!
+2022-03-29 15:15:02,343 - __main__ - INFO - Texto copiado para a area de transferência
+2022-03-29 15:15:06,283 - __main__ - INFO - Chamada da função colar!
+2022-03-29 15:15:06,283 - __main__ - INFO - Texto colado na text area!
+2022-03-29 15:15:10,975 - __main__ - INFO - Chamada da função colar!
+2022-03-29 15:15:10,976 - __main__ - INFO - Texto colado na text area!
+2022-03-29 15:15:11,822 - __main__ - INFO - Chamada da função colar!
+2022-03-29 15:15:11,823 - __main__ - INFO - Texto colado na text area!
+2022-03-29 15:15:11,991 - __main__ - INFO - Chamada da função colar!
+2022-03-29 15:15:11,991 - __main__ - INFO - Texto colado na text area!
+2022-03-29 15:15:12,130 - __main__ - INFO - Chamada da função colar!
+2022-03-29 15:15:12,131 - __main__ - INFO - Texto colado na text area!
+2022-03-29 15:15:12,262 - __main__ - INFO - Chamada da função colar!
+2022-03-29 15:15:12,263 - __main__ - INFO - Texto colado na text area!
+2022-03-29 15:15:12,391 - __main__ - INFO - Chamada da função colar!
+2022-03-29 15:15:12,392 - __main__ - INFO - Texto colado na text area!
+2022-03-29 15:15:12,512 - __main__ - INFO - Chamada da função colar!
+2022-03-29 15:15:12,512 - __main__ - INFO - Texto colado na text area!
+2022-03-29 15:15:17,763 - __main__ - INFO - Chamada da função cortar!
+2022-03-29 15:15:17,763 - __main__ - INFO - Texto salvo na area de transferência!
+2022-03-29 15:15:20,054 - __main__ - INFO - Chamada da função desfazer!
+2022-03-29 15:15:20,056 - __main__ - INFO - Chamada da função settitle
+2022-03-29 15:15:20,056 - __main__ - INFO - Arquivo com título:C:/Users/f48014593820/Documents/Python Scripts/Projects/TextEditor/assets/script2.py gerado!
+2022-03-29 15:15:20,056 - __main__ - INFO - Desfeito com sucesso!
+2022-03-29 15:15:53,884 - __main__ - INFO - Chamada da função sobre!
+2022-03-29 15:15:53,884 - __main__ - INFO - Abrindo caixa de dialogo!
+2022-03-29 15:16:02,080 - __main__ - INFO - Chamada da função abrirArquivo!
+2022-03-29 15:16:02,080 - __main__ - INFO - Abrindo menu de procura e escolha
+2022-03-29 15:16:07,283 - __main__ - INFO - Abrindo arquivo no modo de leitura
+2022-03-29 15:16:35,703 - __main__ - INFO - Chamada da função sair!
+2022-03-29 15:16:35,703 - __main__ - INFO - Exibindo mensagem de saida!
+2022-03-29 15:16:37,306 - __main__ - INFO - Fechando o programa!
+2022-03-29 15:16:44,224 - __main__ - INFO - Editor de Texto Inicializado!
+2022-03-29 15:16:44,237 - __main__ - INFO - Chamada da função settitle
+2022-03-29 15:16:44,238 - __main__ - INFO - Arquivo sem título gerado!
+2022-03-29 15:16:44,326 - __main__ - INFO - Chamada da função atalhos!
+2022-03-29 15:16:44,326 - __main__ - INFO - Atalho executado com sucesso!
+2022-03-29 15:16:53,578 - __main__ - INFO - Chamada da função abrirArquivo!
+2022-03-29 15:16:53,579 - __main__ - INFO - Abrindo menu de procura e escolha
+2022-03-29 15:17:02,676 - __main__ - INFO - Abrindo arquivo no modo de leitura
+2022-03-29 15:17:04,940 - __main__ - ERROR - Erro: Função Abrir Arquivo: 'charmap' codec can't decode byte 0x8f in position 2523: character maps to <undefined>
+2022-03-29 15:17:29,538 - __main__ - INFO - Chamada da função sair!
+2022-03-29 15:17:29,538 - __main__ - INFO - Exibindo mensagem de saida!
+2022-03-29 15:17:30,660 - __main__ - INFO - Fechando o programa!
+2022-03-29 15:19:35,966 - __main__ - INFO - Editor de Texto Inicializado!
+2022-03-29 15:19:35,973 - __main__ - INFO - Chamada da função settitle
+2022-03-29 15:19:35,973 - __main__ - INFO - Arquivo sem título gerado!
+2022-03-29 15:19:36,055 - __main__ - INFO - Chamada da função atalhos!
+2022-03-29 15:19:36,056 - __main__ - INFO - Atalho executado com sucesso!
+2022-03-29 15:21:52,747 - __main__ - INFO - Chamada da função sobre!
+2022-03-29 15:21:52,747 - __main__ - INFO - Abrindo caixa de dialogo!
+2022-03-29 15:22:11,953 - __main__ - INFO - Chamada da função abrirArquivo!
+2022-03-29 15:22:11,953 - __main__ - INFO - Abrindo menu de procura e escolha
+2022-03-29 15:22:20,781 - __main__ - INFO - Abrindo arquivo no modo de leitura
+2022-03-29 15:22:20,787 - __main__ - INFO - Fechadno arquivo!
+2022-03-29 15:22:20,788 - __main__ - INFO - Chamada da função settitle
+2022-03-29 15:22:20,789 - __main__ - INFO - Arquivo com título:C:/Users/f48014593820/Documents/Python Scripts/Projects/TextEditor/assets/script2.py gerado!
+2022-03-29 15:22:20,789 - __main__ - INFO - Arquivo Aberto com sucesso!
+2022-03-29 15:23:21,243 - __main__ - INFO - Chamada da função abrirArquivo!
+2022-03-29 15:23:21,244 - __main__ - INFO - Abrindo menu de procura e escolha
+2022-03-29 15:23:25,464 - __main__ - INFO - Chamada da função novoArquivo!
+2022-03-29 15:23:25,465 - __main__ - INFO - Chamada da função settitle
+2022-03-29 15:23:25,466 - __main__ - INFO - Arquivo sem título gerado!
+2022-03-29 15:23:25,466 - __main__ - INFO - Novo arquivo: None Criado com sucesso!
+2022-03-29 15:24:11,553 - __main__ - INFO - Chamada da função salvarComo!
+2022-03-29 15:24:11,553 - __main__ - INFO - Perguntando o nome e o tipo do arquivo
+2022-03-29 15:24:21,658 - __main__ - INFO - abrindo arquivo no modo de escrita
+2022-03-29 15:24:21,661 - __main__ - INFO - Escrevendo dentro do arquivo
+2022-03-29 15:24:21,677 - __main__ - INFO - Chamada da função settitle
+2022-03-29 15:24:21,677 - __main__ - INFO - Arquivo com título:C:/Users/f48014593820/Documents/Python Scripts/Projects/TextEditor/assets/Me.txt gerado!
+2022-03-29 15:24:21,678 - __main__ - INFO - Arquivo salvo com sucesso!
+2022-03-29 15:24:47,344 - __main__ - INFO - Chamada da função sair!
+2022-03-29 15:24:47,344 - __main__ - INFO - Exibindo mensagem de saida!
+2022-03-29 15:24:48,757 - __main__ - INFO - Fechando o programa!
